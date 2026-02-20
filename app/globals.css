@@ -1,0 +1,292 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 0%);
+
+  /* blue */
+  --blue-50: hsl(221 100% 97%);
+  --blue-100: hsl(209 100% 91%);
+  --blue-200: hsl(206 100% 85%);
+  --blue-300: hsl(206 100% 76%);
+  --blue-400: hsl(220 100% 66%);
+  --blue-500: hsl(220 100% 58%);
+  --blue-600: hsl(215 87% 51%);
+  --blue-700: hsl(218 80% 46%);
+  --blue-800: hsl(220 75% 38%);
+  --blue-900: hsl(218 68% 31%);
+
+  /* gray */
+  --gray-50: hsl(210 40% 98%);
+  --gray-100: hsl(227 47% 96%);
+  --gray-200: hsl(215 27% 91%);
+  --gray-300: hsl(213 22% 84%);
+  --gray-400: hsl(215 15% 65%);
+  --gray-500: hsl(215 12% 47%);
+  --gray-600: hsl(217 15% 35%);
+  --gray-700: hsl(216 21% 27%);
+  --gray-800: hsl(218 28% 17%);
+  --gray-900: hsl(219 36% 11%);
+
+  /* error */
+  --error-50: hsl(4 88% 97%);
+  --error-100: hsl(4 95% 94%);
+  --error-200: hsl(4 98% 89%);
+  --error-300: hsl(4 96% 80%);
+  --error-400: hsl(4 93% 69%);
+  --error-500: hsl(4 86% 58%);
+  --error-600: hsl(4 74% 49%);
+  --error-700: hsl(4 76% 40%);
+  --error-800: hsl(4 72% 33%);
+  --error-900: hsl(8 65% 29%);
+
+  /* warning */
+  --warning-50: hsl(44 100% 96%);
+  --warning-100: hsl(44 98% 89%);
+  --warning-200: hsl(44 99% 77%);
+  --warning-300: hsl(42 99% 65%);
+  --warning-400: hsl(39 98% 56%);
+  --warning-500: hsl(34 94% 50%);
+  --warning-600: hsl(28 97% 44%);
+  --warning-700: hsl(22 92% 37%);
+  --warning-800: hsl(19 84% 31%);
+  --warning-900: hsl(18 80% 26%);
+
+  /* success */
+  --success-25: hsl(144 83% 98%);
+  --success-50: hsl(144 83% 96%);
+  --success-100: hsl(140 75% 92%);
+  --success-200: hsl(144 68% 80%);
+  --success-300: hsl(144 63% 67%);
+  --success-400: hsl(150 57% 54%);
+  --success-500: hsl(152 77% 39%);
+  --success-600: hsl(153 91% 30%);
+  --success-700: hsl(155 90% 24%);
+  --success-800: hsl(155 84% 20%);
+  --success-900: hsl(156 83% 16%);
+
+  --gradient-story-linear-bg: linear-gradient(
+    210deg,
+    rgba(223, 0, 173, 1) 0%,
+    rgba(224, 2, 169, 1) 25%,
+    rgba(255, 156, 0, 1) 50%,
+    rgba(255, 165, 0, 1) 75%
+  );
+  --gradient-bannerBox: linear-gradient(
+    218deg,
+    rgba(21, 94, 239, 0.32) 0%,
+    rgba(21, 94, 239, 0.32) 100%
+  );
+  --gradient-glass: linear-gradient(
+    210deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.36) 100%
+  );
+  --gradient-glass-stroke: linear-gradient(
+    147deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-blue-50: var(--blue-50);
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-blue-400: var(--blue-400);
+  --color-blue-500: var(--blue-500);
+  --color-blue-600: var(--blue-600);
+  --color-blue-700: var(--blue-700);
+  --color-blue-800: var(--blue-800);
+  --color-blue-900: var(--blue-900);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-error-50: var(--error-50);
+  --color-error-100: var(--error-100);
+  --color-error-200: var(--error-200);
+  --color-error-300: var(--error-300);
+  --color-error-400: var(--error-400);
+  --color-error-500: var(--error-500);
+  --color-error-600: var(--error-600);
+  --color-error-700: var(--error-700);
+  --color-error-800: var(--error-800);
+  --color-error-900: var(--error-900);
+  --color-warning-50: var(--warning-50);
+  --color-warning-100: var(--warning-100);
+  --color-warning-200: var(--warning-200);
+  --color-warning-300: var(--warning-300);
+  --color-warning-400: var(--warning-400);
+  --color-warning-500: var(--warning-500);
+  --color-warning-600: var(--warning-600);
+  --color-warning-700: var(--warning-700);
+  --color-warning-800: var(--warning-800);
+  --color-warning-900: var(--warning-900);
+  --color-success-25: var(--success-25);
+  --color-success-50: var(--success-50);
+  --color-success-100: var(--success-100);
+  --color-success-200: var(--success-200);
+  --color-success-300: var(--success-300);
+  --color-success-400: var(--success-400);
+  --color-success-500: var(--success-500);
+  --color-success-600: var(--success-600);
+  --color-success-700: var(--success-700);
+  --color-success-800: var(--success-800);
+  --color-success-900: var(--success-900);
+
+  --font-jakarta-sans: var(--font-plus-jakarta-sans);
+  --font-poppins: var(--font-poppins);
+  --font-roboto: var(--font-roboto);
+  --font-inter: var(--font-inter);
+
+  --text-4xl: 2.5rem;
+  --text-3xl: 2rem;
+  --text-xxs: 10px;
+  --text-default: 15px;
+  --text-default-xs: 11px;
+  --text-default-sm: 13px;
+  --text-default-lg: 17px;
+
+  --radius-custom: 0.625rem;
+  --radius-custom-xl: 1.25rem;
+
+  --shadow-glass: 0 21px 28px 0 rgba(2, 2, 33, 0.1);
+  --shadow-box: 0 -2px 32px 0 rgba(68, 68, 68, 0.08);
+  --shadow-checkbox-checked: 0 0 0 4px rgba(210, 171, 103, 0.24);
+  --shadow-checkbox: 0 0 0 4px rgba(152, 162, 179, 0.14);
+  --shadow-switch:
+    0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1);
+  --shadow-mobile-nav-btn: 0 15px 30px 0 rgba(21, 112, 239, 0.4);
+  --shadow-new-store-title: 0 16px 24px 0 var(--color-gray-200);
+}
+
+@layer base {
+  * {
+    @apply focus:outline-none focus-visible:ring-2 ring-blue-600 [interpolate-size:allow-keywords] border-gray-300;
+  }
+
+  body {
+    @apply font-jakarta-sans text-default text-foreground bg-background tracking-[-0.03em];
+  }
+
+  input,
+  textarea {
+    @apply outline-none bg-transparent;
+  }
+
+  button:not([tabIndex="-1"]):not([data-popper-trigger]):not(:disabled) {
+    @apply active:scale-95 transition cursor-pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-normal;
+  }
+
+  img,
+  svg {
+    @apply select-none;
+  }
+
+  h1 {
+    @apply text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl font-bold;
+  }
+
+  h3 {
+    @apply md:text-3xl text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-2xl font-bold;
+  }
+
+  h5 {
+    @apply text-xl font-bold;
+  }
+
+  h6 {
+    @apply text-lg font-bold;
+  }
+
+  [data-category-scroll] {
+    &::-webkit-scrollbar {
+      @apply w-1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-300 rounded;
+    }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@utility container {
+  @apply mx-auto max-w-290 px-4 w-full;
+}
+
+@utility bg-story-linear-bg {
+  background-image: var(--gradient-story-linear-bg);
+}
+
+@utility bg-bannerBox {
+  background-image: var(--gradient-bannerBox);
+}
+
+@utility bg-glass {
+  background-image: var(--gradient-glass);
+}
+
+@utility bg-glass-stroke {
+  background-image: var(--gradient-glass-stroke);
+}
+
+@utility responsive-category-item {
+  @apply shrink-0 first:w-[133px] [&:nth-child(2)]:w-[110px] [&:nth-child(3)]:w-[106px] [&:nth-child(4)]:w-[97px] [&:nth-child(5)]:w-[131px] [&:nth-child(6)]:w-[106px] [&:nth-child(7)]:w-[82px] [&:nth-child(8)]:w-[97px] [&:nth-child(9)]:w-[92px] [&:nth-child(10)]:w-[115px] [&:nth-child(11)]:w-[92px] [&:nth-child(12)]:w-[105px] [&:nth-child(13)]:w-[92px];
+}
+
+@utility sr-only {
+  @apply absolute size-px p-0 -m-px overflow-hidden [clip:rect(0,0,0,0)] whitespace-nowrap border-0;
+}
+
+@utility pos-center {
+  @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@utility center {
+  @apply flex justify-center items-center;
+}
+
+@utility animated-underline {
+  @apply relative h-fit after:absolute after:left-1/2 after:right-1/2 after:bottom-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 after:ease-in-out before:absolute before:right-1/2 before:left-1/2 before:bottom-0 before:h-0.5 before:bg-blue-500 before:transition-all before:duration-300 before:ease-in-out before:rounded-l after:rounded-r hover:after:right-0 hover:before:left-0;
+}
+
+@utility scrollbar-thin {
+  @apply [scrollbar-width:thin];
+}
